@@ -1,0 +1,70 @@
+ Global
+
+ - Image error: There was an image that was wrongly named 'icon.svg' the name was corrected to 'welding-icon.svg' in order to correct this problem.
+
+ Navigation: 
+
+ - Indicator numbers:
+
+    - The font would not have to be seen on sizes over tablet, so I put a 'display: none' on them.
+    - To show them on phones I used the breakpoint for minor to phone to change to 'display: block'.
+    - The phone wasn't the one on the design, so I used the 'forza' font that was used for the phone numbers.
+    - Changed the color of the font.
+    - Changed the Margin right of the font.
+
+ - Menu:
+
+    - The menu title didn't changed to 'close' when toggled, added a line to the function to change the value of the boolean to force the change.
+
+ Hero:
+
+ - Images:
+    - image main had the burn to the left, changed it to the right.
+    - image top didn't have height and width, also didn't have styles, put it position, width, and height, also translate to positioning it better.
+    - image bottom didn't have height and width, also didn't have styles, put it position, width, and height, also translate to positioning it better.
+    - the after pseudoclass didn't have styles, put them to better emulate the image.
+    - image main on responsive had to have the burn to the left, put it that way.
+    - Theres some redimensioning on the images for responsive, done too.
+
+ Openings: 
+
+ - There was a bad closed strong, corrected.
+ - Didn't had the black strip that is on the design, added using :before.
+ - The colors on the decorations weren't accurate, corrected aswell.
+ - Colors on decorations were different on mobile, corrected.
+
+ Culture:
+
+ - The side image was incorrectly positioned, corrected thepositioning.
+ - Content didn't have a position attribute, changed to relative in order to better positioning the side image.
+ - Padding wasn't declared for the responsive part of the content, corrected it.
+
+ About:
+
+ - The elements were only four, they needed to be five, corrected in the php.
+ - Even elements needed to have a different positioning, used transform and translateY on them to give 75%.
+
+ Testimonials:
+
+ - The Carousel didn't have a flex display, corrected.
+ - Elements needed a white background, corrected too.
+
+ Footer:
+
+- Welding icons were absent, corrected.
+- Links container didn't have flex display, corrected.
+- The space of the link items was set to space-between.
+- Those changes are only for non cellphone devices.
+
+Javascript:
+
+- Testionials:
+   
+   - The carousel was done.
+
+
+
+
+
+
+ 

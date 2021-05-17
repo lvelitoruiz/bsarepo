@@ -1,0 +1,374 @@
+.culture {
+	@extend %content__area--dark;
+
+	position: relative;
+	overflow: hidden;
+	padding-top: rem-calc(57);
+	padding-bottom: rem-calc(58);
+
+	@include media('>phone') {
+		padding-top: rem-calc(110);
+		padding-bottom: rem-calc(110);
+	}
+
+	@include media('>tablet') {
+		padding-top: rem-calc(90);
+		padding-bottom: rem-calc(100);
+	}
+
+	@include media('>desktop-small') {
+		padding-top: rem-calc(110);
+		padding-bottom: rem-calc(120);
+	}
+
+	@include media('>desktop-medium') {
+		padding-top: rem-calc(130);
+		padding-bottom: rem-calc(140);
+	}
+
+	@include media('>desktop-large') {
+		padding-top: rem-calc(150);
+		padding-bottom: rem-calc(160);
+	}
+
+	@include media('>desktop-xlarge') {
+		padding-top: rem-calc(175);
+		padding-bottom: rem-calc(186);
+	}
+
+	&__wrapper {
+		@extend %site-wrapper;
+
+		max-width: rem-calc(575);
+
+		@include media('>phone') {
+			position: relative;
+			display: flex;
+			align-content: center;
+			align-items: center;
+			justify-content: center;
+			max-width: rem-calc(1920);
+			padding-right: rem-calc(160);
+			padding-left: rem-calc(40);
+		}
+
+		@include media('>849px') {
+			padding-right: rem-calc(200);
+			padding-left: rem-calc(80);
+		}
+
+		@include media('>tablet') {
+			padding-right: rem-calc(220);
+			padding-left: rem-calc(120);
+		}
+
+		@include media('>desktop-small') {
+			padding-right: rem-calc(260);
+			padding-left: rem-calc(140);
+		}
+
+		@include media('>desktop-medium') {
+			padding-right: rem-calc(300);
+			padding-left: rem-calc(160);
+		}
+
+		@include media('>desktop-large') {
+			padding-right: rem-calc(340);
+			padding-left: rem-calc(180);
+		}
+
+		@include media('>desktop-xlarge') {
+			padding-right: rem-calc(400);
+			padding-left: rem-calc(211);
+		}
+	}
+
+	&-decoration {
+		@extend %text-decoration--right;
+
+		top: rem-calc(124);
+
+		@include media('>499px') {
+			top: rem-calc(140);
+		}
+
+		@include media('>phone') {
+			top: 26.5%;
+		}
+
+		&__label {
+			@extend %text-decoration__label--dark;
+
+			&-inner {
+				@extend %text-decoration__label-inner--dark;
+			}
+		}
+
+		&__number {
+			@extend %text-decoration__number--dark;
+		}
+	}
+
+	&__media {
+		@include media('>phone') {
+			position: relative;
+			z-index: 2;
+			width: 48.4%;
+		}
+
+		&-main {
+			position: relative;
+			z-index: 1;
+
+			&::before {
+				content: "";
+				position: absolute;
+				top: -10%;
+				left: 4.75%;
+				z-index: 1;
+				width: 69%;
+				height: 86%;
+				background-color: $color-orange;
+
+				@include media('>phone') {
+					display: none;
+				}
+			}
+
+			&::after {
+				@extend %dots-pattern;
+
+				left: 7%;
+				bottom: 6%;
+				width: 12%;
+				height: 58%;
+
+				@include media('>phone') {
+					left: auto;
+					right: -5%;
+					bottom: -7%;
+					width: 93%;
+					height: 45%;
+				}
+			}
+		}
+	}
+
+	&__picture {
+		@extend %site-picture;
+
+		&-top {
+			@include ratio(91, 95);
+
+			position: relative;
+			z-index: 3;
+			width: 28%;
+			margin-bottom: -7.6%;
+
+			@include media('>phone') {
+				width: 59.2%;
+				margin-bottom: 21%;
+				margin-left: auto;
+				margin-right: 17.9%;
+			}
+
+			&::before {
+				@extend %dots-pattern;
+
+				display: none;
+
+				@include media('>phone') {
+					display: block;
+					top: -16.55%;
+					right: -8.5%;
+					z-index: 1;
+					width: 53%;
+					height: 104%;
+				}
+			}
+
+			&::after {
+				@include media('>phone') {
+					padding-top: 208 / 373 * 100%;
+				}
+			}
+		}
+
+		&-main {
+			@include ratio(295, 211);
+
+			position: relative;
+			z-index: 2;
+			left: 6.2%;
+			width: 95%;
+			margin-left: auto;
+
+			@include media('>phone') {
+				left: 0;
+				width: 100%;
+			}
+
+			&::before {
+				@include media('>phone') {
+					right: auto;
+					left: 0;
+					width: 18%;
+					z-index: 3;
+				}
+			}
+
+			&::after {
+				@include media('>phone') {
+					padding-top: 422 / 633 * 100%;
+				}
+			}
+		}
+
+		&-side {
+			@include ratio(184, 252);
+			display: none;
+
+			@include media('>phone') {
+				display: block;
+				position: absolute;
+				z-index: 1;
+				top: 0;
+				right: 0;
+				width: rem-calc(184);
+				height: rem-calc(252);
+				transform: translate(80%,-40%);
+			}
+
+			&::before {
+				@extend %dots-pattern;
+
+				bottom: -10.55%;
+				left: -12%;
+				z-index: 1;
+				width: 80%;
+				height: 97%;
+			}
+		}
+	}
+
+	&__image {
+		@extend %image__cover;
+
+		z-index: 2;
+	}
+
+	&-header {
+		margin-bottom: rem-calc(12);
+
+		@include media('>phone') {
+			margin-bottom: rem-calc(15);
+		}
+
+		@include media('>desktop-small') {
+			margin-bottom: rem-calc(18);
+		}
+
+		@include media('>desktop-medium') {
+			margin-bottom: rem-calc(22);
+		}
+
+		@include media('>desktop-large') {
+			margin-bottom: rem-calc(26);
+		}
+
+		&__subtitle {
+			@extend %header__subtitle--light;
+
+			margin-bottom: rem-calc(14);
+
+			@include media('>phone') {
+				margin-bottom: rem-calc(12);
+			}
+		}
+
+		&__title {
+			@extend %header__title--light;
+		}
+	}
+
+	&-content {
+		width: 93%;
+		margin-top: -16.5%;
+		position: relative;
+
+		@include media('>phone') {
+			width: 51.6%;
+			margin-top: 0;
+			margin-bottom: rem-calc(15);
+		}
+
+		@include media('>tablet') {
+			margin-bottom: rem-calc(20);
+		}
+
+		@include media('>desktop-small') {
+			margin-bottom: rem-calc(25);
+		}
+
+		@include media('>desktop-medium') {
+			margin-bottom: rem-calc(30);
+		}
+
+		@include media('>desktop-large') {
+			margin-bottom: rem-calc(35);
+		}
+
+		&::before {
+			@include media('>phone') {
+				content: "";
+				position: absolute;
+				top: 9.5%;
+				left: -37.4%;
+				z-index: 1;
+				width: 89.2%;
+				height: 105.9%;
+				max-height: rem-calc(625);
+				background-color: $color-orange;
+			}
+		}
+
+		&__inner {
+			background-color: $color-slate;
+			padding-top: rem-calc(118);
+
+			@include media('>499px') {
+				padding-top: rem-calc(160);
+			}
+
+			@include media('<phone') {
+				padding: rem-calc(100) rem-calc(40) rem-calc(80) rem-calc(40);
+			}
+
+			@include media('>phone') {
+				position: relative;
+				z-index: 3;
+				padding: rem-calc(40);
+			}
+
+			@include media('>tablet') {
+				padding: rem-calc(60);
+			}
+
+			@include media('>desktop-small') {
+				padding: rem-calc(80);
+			}
+
+			@include media('>desktop-medium') {
+				padding: rem-calc(100) rem-calc(100) rem-calc(100) rem-calc(120);
+			}
+
+			@include media('>desktop-large') {
+				padding: rem-calc(120) rem-calc(120) rem-calc(120) rem-calc(140);
+			}
+
+			@include media('>desktop-xlarge') {
+				padding: rem-calc(145) rem-calc(144) rem-calc(145) rem-calc(164);
+			}
+		}
+	}
+}
